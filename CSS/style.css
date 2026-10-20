@@ -1,0 +1,273 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 18px 20px;
+}
+
+
+nav a {
+    position: relative;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    opacity: 0.85;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: white;
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
+}
+
+
+nav a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   HERO / HOMEPAGE
+   ========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background-image:url(pattern.avif)
+
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #ccc;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 35px;
+
+    background-color: #fff;
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+
+    background-color: #ddd;
+}
+
+
+
+@media (max-width: 700px) {
+
+    nav {
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+/* ===== FOOTER ===== */
+
+.pie {
+
+    padding: 45px 20px 30px;
+
+    background: #111;
+    border-top: 4px solid #8e44ad;
+
+    text-align: center;
+    color: #fff;
+}
+
+/* MADE BY PIETROCKIJ */
+.pie h1 {
+    margin: 0;
+
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Based on Hirohiko Araki... */
+.pie h2 {
+    margin: 10px 0 25px;
+
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    color: #aaa;
+}
+
+/* Follow me */
+.pie a {
+    display: inline-block;
+
+    margin: 0;
+    padding: 8px 18px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    color: #c77dff;
+
+    border: 1px solid #8e44ad;
+    border-radius: 20px;
+
+    transition: 0.25s ease;
+}
+
+.pie a:hover {
+    color: white;
+    background: #8e44ad;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .pie {
+        padding: 35px 15px 25px;
+    }
+
+    .pie h1 {
+        font-size: 1.35rem;
+        letter-spacing: 2px;
+    }
+
+    .pie h2 {
+        font-size: 0.8rem;
+    }
+}
